@@ -1,0 +1,6 @@
+
+CREATE TABLE commands (id SERIAL PRIMARY KEY, name VARCHAR(100) NOT NULL);
+ALTER TABLE commands ADD COLUMN slot JSON DEFAULT('{}');
+
+CREATE TABLE variations (id SERIAL REFERENCES commands(id) ON DELETE CASCADE, variation VARCHAR(250) NOT NULL);
+CREATE VIEW commandsview AS SELECT a.id, a.name, b.variation FROM commands a, variations b WHERE a.id=b.id;

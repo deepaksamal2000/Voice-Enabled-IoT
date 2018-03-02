@@ -1,0 +1,20 @@
+[
+  {
+    "typeId": "iot.devicetype.light",
+    "formalName": "light",
+    "synonyms": [
+      "bulb",
+      "tubelight"
+    ],
+    "capabilities": {
+      "intensity": {
+        "maxRange": 10,
+        "minRange": 0
+      },
+      "switch": [
+        "on",
+        "off"
+      ]
+    }
+  }
+]
